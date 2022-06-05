@@ -1,0 +1,5 @@
+config:
+  install_tree: $spack/opt/spack
+  install_path_scheme: "${ARCHITECTURE}/${COMPILERNAME}-${COMPILERVER}/${PACKAGE}-${VERSION}"
+  install_missing_compilers: True
+  build_jobs: 16

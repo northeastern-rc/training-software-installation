@@ -1,0 +1,24 @@
+modules:
+  tcl:
+    hash_length: 0
+    projections:
+      all: '{name}/{version}-{compiler.name}/{compiler.version}'
+      ^mpi: '{name}/{version}-{^mpi.name}/{^mpi.version}-{compiler.name}/{compiler.version}'
+    slurm@17.11.6:
+      environment:
+        prepend_path:
+          PATH: '/usr/bin'
+          LD_LIBRARY_PATH: '/usr/lib:/usr/lib64:/usr/libexec:/usr/lib64/slurm'
+          LIBRARY_PATH: '/usr/lib:/usr/lib64:/usr/libexec:/usr/lib64/slurm'
+          CPATH: '/usr/include:/usr/include/slurm'
+          C_INCLUDE_PATH: '/usr/include:/usr/include/slurm'
+          CPLUS_INCLUDE_PATH: '/usr/include:/usr/include/slurm' 
+    ucx@1.8.0%gcc@10.1.0:
+      environment:
+        prepend_path:
+          PATH: '/shared/centos7/ucx/1.8.0/bin'
+          LD_LIBRARY_PATH: '/shared/centos7/ucx/1.8.0/lib'
+          LIBRARY_PATH: '/shared/centos7/ucx/1.8.0/lib'
+          CPATH: '/shared/centos7/ucx/1.8.0/include'
+          C_INCLUDE_PATH: '/shared/centos7/ucx/1.8.0/include'
+          CPLUS_INCLUDE_PATH: '/shared/centos7/ucx/1.8.0/include' 
