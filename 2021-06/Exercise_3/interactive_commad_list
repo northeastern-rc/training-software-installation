@@ -1,0 +1,29 @@
+## For exercise 3 use:
+srun --partition=express --nodes=1 --ntasks=16 --pty --time=00:30:00 /bin/bash
+## Or, alternitively, use the Bootcamp2021 reservation (only valid during bootcamp period 6/7-6/9):
+srun --partition=reservation --reservation=bootcamp2021cpu --ntasks=16 --pty --time=00:30:00 /bin/bash
+
+cd Exercise_3
+tar -zxvf xaos-3.6.tar.gz
+gcc --version
+module load gcc/8.1.0
+gcc --version
+
+cd xaos-3.6
+less INSTALL
+./configure –h
+./configure --prefix=$HOME/xaos-3.6-myinstall
+make -j 16 
+make install
+
+cd ~/xaos-3.6-myinstall/bin
+./xaos &
+
+cd $HOME #change directories to $HOME
+which xaos
+export PATH=~/xaos-3.6-myinstall/bin:$PATH
+which xaos
+./xaos & 
+
+source Exercise_3/env.sh
+xaos & 

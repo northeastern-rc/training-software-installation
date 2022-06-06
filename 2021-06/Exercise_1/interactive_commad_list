@@ -1,0 +1,12 @@
+## For exercises 1-2 use the following:
+srun --partition=express --nodes=1 --ntasks=2 --pty --time=00:30:00 /bin/bash
+## Or, alternitively, use the Bootcamp2021 reservation (only valid during bootcamp period 6/7-6/9):
+srun --partition=reservation --reservation=bootcamp2021cpu --ntasks=2 --pty --time=00:30:00 /bin/bash
+
+conda deactivate
+module purge
+module load discovery anaconda3/2021.05
+conda create -n myenv python=3.9 -y
+source activate myenv
+conda install -c anaconda numpy -y
+
