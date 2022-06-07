@@ -1,7 +1,10 @@
 ## For exercise 3 use:
 srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
+# during training session, use the following options for reservation:
+--partition=reservation --reservation=bootcamp_cpu_2022
 
-cd Accessing_and_Installing_Software/Exercise_3
+
+cd Exercise_3
 tar -xf samtools-1.14.tar.bz2
 cd samtools-1.14
 ./configure --prefix=$HOME/samtools-1.14-training --disable-lzma
@@ -12,7 +15,6 @@ which samtools
 export PATH=$HOME/samtools-1.14-training/bin:$PATH
 which samtools
 samtools
-
 
 source Exercise_3/env.sh
 samtools

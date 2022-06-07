@@ -1,13 +1,17 @@
 ## For exercise 4 use:
 srun --partition=express --nodes=1 --cpus-per-task=2 --time=00:30:00 --pty /bin/bash
+# during training session, use the following options for reservation:
+--partition=reservation --reservation=bootcamp_cpu_2022
 
-cd Accessing_and_Installing_Software/Exercise_4
+
+cd Exercise_4
 module load singularity/3.5.3
 
 CONTAINER_IMAGE=/shared/container_repository/python/python_3_10.sif
 
 # Option 1 – Enter an interactive shell using the 'singularity shell' command
 singularity shell -B "/work:/work,/scratch:/scratch" ${CONTAINER_IMAGE}
+
 # Run this inside the interactive shell
 python3 HelloWorld.py
 

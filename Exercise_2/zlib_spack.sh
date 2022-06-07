@@ -1,12 +1,19 @@
 #!/bin/bash
 
-#SBATCH --partition=express
-#SBATCH --job-name=install-spack
+#SBATCH --job-name=spack-install
 #SBATCH --time=01:00:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=2
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
+
+##USE ONLY DURING TRAINING
+#SBATCH --partition=reservation
+#SBATCH --reservation=bootcamp_cpu_2022
+
+##USE AFTER TRAINING
+##SBATCH --partition=express
+
 
 ## Source spack environmnet:
 source ~/spack/share/spack/setup-env.sh
