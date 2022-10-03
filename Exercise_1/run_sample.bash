@@ -9,7 +9,7 @@
 
 ##USE ONLY DURING TRAINING
 #SBATCH --partition=reservation
-#SBATCH --reservation=bootcamp_cpu_2022
+#SBATCH --reservation=fall_training_cpu_2022
 
 ##USE AFTER TRAINING
 ##SBATCH --partition=express
