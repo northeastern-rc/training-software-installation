@@ -1,7 +1,7 @@
 ## For exercise 4 use:
 srun --partition=express --nodes=1 --cpus-per-task=2 --time=00:30:00 --pty /bin/bash
 # during training session, use the following options for reservation:
---partition=reservation --reservation=bootcamp_cpu_2022
+--partition=reservation --reservation=fall_training_cpu_2022
 
 
 cd Exercise_4

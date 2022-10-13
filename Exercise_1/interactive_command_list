@@ -1,7 +1,7 @@
 ## For exercises 1-2 use the following:
 srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
 # during training session, use the following options for reservation:
---partition=reservation --reservation=bootcamp_cpu_2022
+--partition=reservation --reservation=fall_training_cpu_2022
 
 
 module load anaconda3/2021.05
