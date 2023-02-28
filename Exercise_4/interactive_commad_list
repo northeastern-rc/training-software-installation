@@ -1,8 +1,5 @@
 ## For exercise 4 use:
 srun --partition=express --nodes=1 --cpus-per-task=2 --time=00:30:00 --pty /bin/bash
-# during training session, use the following options for reservation:
---partition=reservation --reservation=fall_training_cpu_2022
-
 
 cd Exercise_4
 module load singularity/3.5.3
@@ -17,4 +14,3 @@ python3 HelloWorld.py
 
 # Option 2 - Run the script using 'singularity exec' command
 singularity exec -B "/work:/work,/scratch:/scratch" ${CONTAINER_IMAGE} python3 HelloWorld.py
-

@@ -6,13 +6,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
-
-##USE ONLY DURING TRAINING
-#SBATCH --partition=reservation
-#SBATCH --reservation=fall_training_cpu_2022
-
-##USE AFTER TRAINING
-##SBATCH --partition=express
+#SBATCH --partition=express
 
 ## load the anaconda package:
 module load discovery

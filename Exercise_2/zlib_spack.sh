@@ -6,14 +6,7 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
-
-##USE ONLY DURING TRAINING
-#SBATCH --partition=reservation
-#SBATCH --reservation=fall_training_cpu_2022
-
-##USE AFTER TRAINING
-##SBATCH --partition=express
-
+#SBATCH --partition=express
 
 ## Source spack environmnet:
 source ~/spack/share/spack/setup-env.sh
