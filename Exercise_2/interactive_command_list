@@ -2,9 +2,9 @@
 srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
 
 source ~/spack/share/spack/setup-env.sh
-spack info zlib
-spack install zlib@1.2.11
+spack info tcl
+spack install tcl@8.6.12
 source ~/spack/share/spack/setup-env.sh
 module avail
-spack find zlib
-spack load zlib
+spack find tcl
+spack load tcl

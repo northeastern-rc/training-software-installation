@@ -12,11 +12,11 @@
 source ~/spack/share/spack/setup-env.sh
 
 ## Install a package (uncomment this line for a first-time install):
-# spack install zlib@1.2.11
+# spack install tcl@8.6.12
 
 ## Source Spack again, and load the package:
 source ~/spack/share/spack/setup-env.sh
-spack load zlib
+spack load tcl
 
 # Print the LD_LIBRARY_PATH
-echo $LD_LIBRARY_PATH
+echo $PATH

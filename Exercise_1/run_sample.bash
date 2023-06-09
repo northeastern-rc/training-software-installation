@@ -10,7 +10,7 @@
 
 ## load the anaconda package:
 module load discovery
-module load anaconda3/2021.05
+module load anaconda3/2022.05
 
 ## activate the environment:
 source activate myenv
