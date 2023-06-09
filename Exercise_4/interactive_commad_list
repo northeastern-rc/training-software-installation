@@ -1,5 +1,11 @@
 ## For exercise 4 use:
-srun --partition=express --nodes=1 --cpus-per-task=2 --time=00:30:00 --pty /bin/bash
+#####Use after training##############
+###srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
+######################################
+#
+######Use during training###############
+srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 
+########################################
 
 cd Exercise_4
 module load singularity/3.5.3

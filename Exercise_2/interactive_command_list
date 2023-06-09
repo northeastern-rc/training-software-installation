@@ -1,5 +1,11 @@
 ## For exercises 1-2 use the following:
-srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
+#####Use after training##############
+###srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
+######################################
+#
+######Use during training###############
+srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 
+########################################
 
 source ~/spack/share/spack/setup-env.sh
 spack info tcl

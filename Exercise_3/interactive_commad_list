@@ -1,5 +1,11 @@
 ## For exercise 3 use:
-srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
+#####Use after training##############
+###srun --partition=express --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash
+######################################
+#
+######Use during training###############
+srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 
+########################################
 
 cd Exercise_3
 tar -xf samtools-1.14.tar.bz2

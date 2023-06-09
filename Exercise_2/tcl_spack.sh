@@ -6,7 +6,12 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
-#SBATCH --partition=express
+#####Use during training###############
+#SBATCH --partition=reservation
+#SBATCH --reservation=bootcamp_cpu_2023
+
+#####Use after training##############
+##SBATCH --partition=express
 
 ## Source spack environmnet:
 source ~/spack/share/spack/setup-env.sh
