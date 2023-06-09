@@ -10,6 +10,7 @@
 #####Use during training###############
 #SBATCH --partition=reservation
 #SBATCH --reservation=bootcamp_cpu_2023 
+#######################################
 
 #####Use after training##############
 ##SBATCH --partition=express
