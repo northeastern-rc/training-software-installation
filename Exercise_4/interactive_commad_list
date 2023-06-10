@@ -4,10 +4,9 @@
 ######################################
 #
 ######Use during training###############
-srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 
+srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash 
 ########################################
 
-cd Exercise_4
 module load singularity/3.5.3
 
 CONTAINER_IMAGE=/shared/container_repository/python/python_3_10.sif

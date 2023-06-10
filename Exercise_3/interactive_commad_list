@@ -4,10 +4,9 @@
 ######################################
 #
 ######Use during training###############
-srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 
+srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash 
 ########################################
 
-cd Exercise_3
 tar -xf samtools-1.14.tar.bz2
 cd samtools-1.14
 ./configure --prefix=$HOME/samtools-1.14-training --disable-lzma
@@ -19,5 +18,6 @@ export PATH=$HOME/samtools-1.14-training/bin:$PATH
 which samtools
 samtools
 
+#We can write a script to load env whenever we use new terminal
 source Exercise_3/env.sh
 samtools

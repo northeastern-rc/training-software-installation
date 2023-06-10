@@ -4,13 +4,14 @@
 ######################################
 #
 ######Use during training###############
-srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 
+srun --partition=reservation --reservation=bootcamp_cpu_2023 --nodes=1 --cpus-per-task=2 --pty --time=00:30:00 /bin/bash 
 ########################################
 
+module load python/3.8.1
 source ~/spack/share/spack/setup-env.sh
 spack info tcl
 spack install tcl@8.6.12
 source ~/spack/share/spack/setup-env.sh
-module avail
 spack find tcl
 spack load tcl
+echo $PATH
