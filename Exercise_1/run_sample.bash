@@ -6,11 +6,19 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
-#SBATCH --partition=express
+
+#####Use during training###############
+#SBATCH --partition=reservation
+#SBATCH --reservation=bootcamp_cpu_2023 
+#######################################
+
+#####Use after training##############
+##SBATCH --partition=express
+
 
 ## load the anaconda package:
 module load discovery
-module load anaconda3/2021.05
+module load anaconda3/2022.05
 
 ## activate the environment:
 source activate myenv
